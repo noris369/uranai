@@ -474,6 +474,93 @@
     border-color: var(--gold);
   }
 
+  /* LINE CTAブロック */
+  .line-cta {
+    margin-top: 32px;
+    background: linear-gradient(135deg, rgba(0,180,90,0.12) 0%, rgba(0,140,70,0.06) 100%);
+    border: 1px solid rgba(0,200,100,0.3);
+    padding: 32px 28px;
+    text-align: center;
+    position: relative;
+  }
+
+  .line-cta::before {
+    content: '✦';
+    position: absolute;
+    top: 10px; left: 14px;
+    color: #06c755;
+    opacity: 0.4;
+    font-size: 10px;
+  }
+
+  .line-cta-label {
+    font-size: 10px;
+    letter-spacing: 0.4em;
+    color: #06c755;
+    opacity: 0.8;
+    margin-bottom: 12px;
+  }
+
+  .line-cta-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--gold-pale);
+    margin-bottom: 8px;
+    line-height: 1.6;
+  }
+
+  .line-cta-sub {
+    font-size: 13px;
+    color: rgba(245,233,192,0.65);
+    line-height: 1.9;
+    margin-bottom: 24px;
+  }
+
+  .line-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+    text-align: left;
+  }
+
+  .line-benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(245,233,192,0.8);
+    padding: 8px 12px;
+    background: rgba(6,199,85,0.07);
+    border-left: 2px solid #06c755;
+  }
+
+  .line-benefit-item span { color: #06c755; font-size: 16px; }
+
+  .line-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #06c755;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 36px;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    transition: transform 0.2s, box-shadow 0.3s;
+    border-radius: 2px;
+  }
+
+  .line-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(6,199,85,0.35);
+  }
+
+  .line-btn-icon { font-size: 22px; }
+
   /* フッター */
   .footer {
     text-align: center;
@@ -594,6 +681,21 @@
     <div class="section-card">
       <p class="section-label">ラッキーアイテム・吉方位</p>
       <div class="lucky-grid" id="res-lucky"></div>
+    </div>
+
+    <div class="line-cta">
+      <p class="line-cta-label">✦ 公式LINE 友だち登録特典 ✦</p>
+      <p class="line-cta-title">あなたの本命星を<br>もっと深く知りたいですか？</p>
+      <p class="line-cta-sub">公式LINEにご登録いただくと<br>3つの特典を無料でプレゼント中です</p>
+      <div class="line-benefits">
+        <div class="line-benefit-item"><span>✦</span>30分間の無料相談（先着限定）</div>
+        <div class="line-benefit-item"><span>✦</span>心のヒント集PDF　プレゼント</div>
+        <div class="line-benefit-item"><span>✦</span>生成AIで書く自分史PDF　プレゼント</div>
+      </div>
+      <a class="line-btn" href="https://lin.ee/Q3eOxtm" target="_blank">
+        <span class="line-btn-icon">💬</span>
+        無料で友だち登録する
+      </a>
     </div>
 
     <button class="reset-btn" onclick="reset()">← もう一度占う</button>
